@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Container } from "react-bootstrap";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import PostReco from "./Components/PostReco";
+import Reco from "./Components/Reco";
+import "./App.css";
 
 function App() {
+  const [themeToggle, setThemeToggle] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className={themeToggle ? "dark" : "light"}>
+        {" "}
+        <Router>
+          <Container>
+            {" "}
+            <Switch>
+              <Route exact path="/">
+                <PostReco
+                  setThemeToggle={setThemeToggle}
+                  themeToggle={themeToggle}
+                />
+              </Route>
+              <Route exact path="/reco">
+                <Reco />
+              </Route>
+            </Switch>
+          </Container>
+        </Router>
+      </div>{" "}
+    </>
   );
 }
 

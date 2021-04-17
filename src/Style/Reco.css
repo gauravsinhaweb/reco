@@ -1,0 +1,11 @@
+.card {
+  width: 100% !important;
+  height: 20vh;
+}
+.box {
+  height: 3rem;
+  width: 4rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding-top: 1em;
+}
