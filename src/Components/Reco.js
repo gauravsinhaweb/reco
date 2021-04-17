@@ -8,7 +8,7 @@ function Reco() {
 
   useEffect(() => {
     db.collection("postreco")
-      .orderBy("timestamp", "desc")
+      .orderBy("timestamp")
       .onSnapshot((snapshot) =>
         setPosts(snapshot.docs.map((doc) => doc.data()))
       );
