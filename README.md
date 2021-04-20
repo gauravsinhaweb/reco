@@ -1,5 +1,6 @@
 # Installation:
 -`git clone https://github.com/gauravsinhaweb/reco.git`
--`cd reco`
--`npm install`
--`npm start`
+- `git clone https://github.com/saurabhdaware/weather-app.git`
+- `cd weather-app`
+- `npm install`
+- `npm start`
