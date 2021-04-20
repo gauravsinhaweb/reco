@@ -191,7 +191,7 @@ function PostReco({ setThemeToggle, themeToggle }) {
               <div className="form-group row col-form-label">
                 <div className="col-10">
                   <input
-                    list="list"
+                    list="instrulist"
                     className="form-control"
                     disabled={!exchangeValue}
                     required
@@ -200,9 +200,9 @@ function PostReco({ setThemeToggle, themeToggle }) {
                       !exchangeValue ? "Please select an exchange first" : null
                     }
                   />
-                  <datalist id="list">
+                  <datalist id="instrulist">
                     {InstrumentJSON[0].data.map((info) => {
-                      console.log(info.tradingsymbol);
+                      <option value={info} />;
                     })}
                   </datalist>
                 </div>
